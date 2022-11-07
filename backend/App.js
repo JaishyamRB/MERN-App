@@ -8,16 +8,17 @@ connectDB()
 
 const app = express()
 
-// overwrite default middleware
-const {errorHandler} = require('./middleware/errorHandler')
-app.use(errorHandler)
-
 // setting up dependabilities
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
 
 // setting up routes
-app.use("/api/goal",require("../backend/routes/goalRoutes"))
+const goalRoutes = require("../backend/routes/goalRoutes")
+app.use("/api/goal",goalRoutes)
+
+// overwrite default middleware
+const {errorHandler} = require('./middleware/errorMiddleware')
+app.use(errorHandler)
 
 app.listen(port, () => console.log(`Server listening on ${port}`))

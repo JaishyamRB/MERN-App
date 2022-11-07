@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const {postGoal,getGoal,putGoal,delGoal} = require("../controller/goalControl")
 
-// CRUD
+// CRUD for goals
 router.post("/",postGoal)
 
 router.get("/",getGoal)
