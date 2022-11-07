@@ -12,7 +12,6 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
-
 // setting up routes
 const goalRoutes = require("../backend/routes/goalRoutes")
 app.use("/api/goal",goalRoutes)
