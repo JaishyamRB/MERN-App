@@ -2,6 +2,10 @@ const express = require('express')
 const dotenv = require('dotenv').config()
 const port = process.env.PORT || 3000
 
+// connect to database
+const {connectDB} = require('./config/db')
+connectDB()
+
 const app = express()
 
 // overwrite default middleware
