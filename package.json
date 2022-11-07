@@ -1,0 +1,19 @@
+{
+  "name": "mern-app",
+  "version": "1.0.0",
+  "description": "A full-fledged web application to manage todo lists.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaishyamRB/MERN-App.git"
+  },
+  "author": "Jaishyam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaishyamRB/MERN-App/issues"
+  },
+  "homepage": "https://github.com/JaishyamRB/MERN-App#readme"
+}
