@@ -2,9 +2,9 @@
   "name": "mern-app",
   "version": "1.0.0",
   "description": "A full-fledged web application to manage todo lists.",
-  "main": "index.js",
+  "main": "./backend/App.js",
   "scripts": {
-    "start": "nodemon App.js"
+    "start": "nodemon ./backend/App.js"
   },
   "repository": {
     "type": "git",
