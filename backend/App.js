@@ -14,15 +14,16 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
-// setting up routes
+// setting up routes and middlewares
+const {errorHandler} = require('./middleware/errorMiddleware')
+
 const goalRoutes = require("./routes/goalRoutes")
 const userRoutes = require("./routes/userRoutes")
 
 app.use("/api/goals",goalRoutes)
 app.use("/api/users",userRoutes)
 
-// overwrite default middleware
-const {errorHandler} = require('./middleware/errorMiddleware')
 app.use(errorHandler)
+
 
 app.listen(port, () => console.log(`Server listening on ${port}`))
