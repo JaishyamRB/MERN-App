@@ -4,8 +4,10 @@ const port = process.env.PORT || 3000
 
 // connect to database
 const {connectDB} = require('./config/db')
+
 connectDB()
 
+// server
 const app = express()
 
 // setting up dependabilities
@@ -17,7 +19,7 @@ const goalRoutes = require("./routes/goalRoutes")
 const userRoutes = require("./routes/userRoutes")
 
 app.use("/api/goals",goalRoutes)
-app.use("/api/users", userRoutes)
+app.use("/api/users",userRoutes)
 
 // overwrite default middleware
 const {errorHandler} = require('./middleware/errorMiddleware')
