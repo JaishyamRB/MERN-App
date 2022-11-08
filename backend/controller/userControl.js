@@ -64,8 +64,6 @@ const loginUser = asyncHandler(async (req,res) =>{
     // get the user
     const {email,password} = req.body
     // checking if all fields are present
-    console.log(!email || !password);
-    console.log(email,password);
     if(!email || !password){
         res.status(400)
         throw new Error("Enter email and password")
