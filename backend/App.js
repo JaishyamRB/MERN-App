@@ -13,8 +13,11 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
 // setting up routes
-const goalRoutes = require("../backend/routes/goalRoutes")
-app.use("/api/goal",goalRoutes)
+const goalRoutes = require("./routes/goalRoutes")
+const userRoutes = require("./routes/userRoutes")
+
+app.use("/api/goals",goalRoutes)
+app.use("/api/users", userRoutes)
 
 // overwrite default middleware
 const {errorHandler} = require('./middleware/errorMiddleware')
