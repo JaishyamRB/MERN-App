@@ -4,7 +4,8 @@
   "description": "A full-fledged web application to manage todo lists.",
   "main": "./backend/App.js",
   "scripts": {
-    "start": "nodemon ./backend/App.js"
+    "server": "nodemon ./backend/App.js",
+    "client": "npm start --prefix frontend"
   },
   "repository": {
     "type": "git",
